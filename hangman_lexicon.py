@@ -3,12 +3,9 @@
 class HangmanLexicon:
 
     def __init__(self):
-        self._words = [
-            "BUOY","COMPUTER","CONNOISSEUR",
-            "DEHYDRATE","FUZZY","HUBBUB",
-            "KEYHOLE","QUAGMIRE","SLITHER",
-            "ZIRCON"
-        ]
+        with open("HangmanLexicon.txt") as f:
+            self._words = f.readlines()
+        
     
     def size(self):
         return len(self._words)
