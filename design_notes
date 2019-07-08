@@ -1,0 +1,63 @@
+
+Algo for interactive session
+1. select secret word at random from some source
+2. display a row of dashes one for each letter in the secret word
+3. for a correct guess
+  update the dashes to display all instances of the correctly guessed letter
+4. for each incorrect guess, the user is penalised. we record this
+5. the game ends in a 
+	1. Loss if the user makes 8 incorrect guesses
+  	2. Win if the user gueses all the letters before exhausting the 8 guesses 
+
+
+Graphics
+drawing an evolving picture of the user being hanged at a scaffold
+each incorrect guess will lead to the addition of a new part to the
+user being hanged at the scaffold in this order
+(scaffold is already prepared)
+1. head
+2. body
+3. left arm
+4. right arm
+5. left leg *
+6. right leg *
+7. left foot *
+8. right foot *
+
+3 PART DESIGN
+1. interactive console with preselected text
+2. introducing the scaffold
+3. replace preselected text with words from a file
+
+SO FAR
+I believe that I've already completed the first
+and third design requirements. All that is left is the graphics
+
+ADDING THE GRAPHICS
+The homework suggested that we have our main console app. Then start a gui
+window with the scaffold prepared when the console app begins. we then use 
+the gui window object to make changes to the gui like adding parts of the
+scaffold, updating the guessed words and showing the actual word in its form.
+
+That is more or less what we will do
+
+1. Create such a class with the ff methods
+	something to show the gui and initialize the scaffold
+	someway to update the label for guessed words
+	means of updating the actual secret word
+	means of notifying the gui of a wrong guess so that it can
+	draw the next body part
+
+class HangmanCanvas:
+	init
+	create_scaffold
+	notifyincorrectGuess
+	update_secret_word
+	update_guessed_words
+
+we intended to use turtle for the drawing. 
+
+turtle graphics can be drawn on a tkinter.Canvas object.
+We shall thus use tkinter to develop the gui for
+
+	

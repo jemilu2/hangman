@@ -6,7 +6,6 @@ class HangmanLexicon:
         with open("HangmanLexicon.txt") as f:
             self._words = f.readlines()
         
-    
     def size(self):
         return len(self._words)
 
